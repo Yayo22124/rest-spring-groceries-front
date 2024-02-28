@@ -1,0 +1,42 @@
+<mat-toolbar color="primary" class="flex justify-between">
+    <a routerLink="/groceries/home">
+        <h1 class="text-3xl bg-white/25 text-yellow-300 backdrop-blur-md rounded-xl p-2 font-space-grotesk font-bold uppercase">Groceries</h1>
+    </a>
+    <nav class="gap-3 flex">
+        <button class="flex" mat-icon-button [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/groceries/home']" routerLinkActive="bg-white/20" class="flex items-center justify-around gap-1">
+                <mat-icon>home</mat-icon>
+                Inicio
+            </button>
+            <button mat-menu-item [routerLink]="['/groceries/products']" routerLinkActive="bg-white/20 " class="flex items-center justify-around gap-1">
+                <mat-icon>play_arrow</mat-icon>
+                Products
+            </button>
+            <button mat-menu-item [routerLink]="['/groceries/customers']" routerLinkActive="bg-white/20"  class="flex items-center justify-around gap-1">
+                <mat-icon>star</mat-icon>
+                Customers
+            </button>
+            <button mat-menu-item [routerLink]="['/groceries/sales']" routerLinkActive="bg-white/20"  class="flex items-center justify-around gap-1">
+                <mat-icon>star</mat-icon>
+                Sales
+            </button>
+            <button mat-menu-item [routerLink]="['/groceries/suppliers']" routerLinkActive="bg-white/20"  class="flex items-center justify-around gap-1">
+                <mat-icon>star</mat-icon>
+                Suppliers
+            </button>
+            <button mat-menu-item [routerLink]="['/groceries/orders']" routerLinkActive="bg-white/20"  class="flex items-center justify-around gap-1">
+                <mat-icon>star</mat-icon>
+                Orders
+            </button>
+            <button mat-menu-item [routerLink]="['/groceries/employees']" routerLinkActive="bg-white/20"  class="flex items-center justify-around gap-1">
+                <mat-icon>star</mat-icon>
+                Employees
+            </button>
+        </mat-menu>
+
+    </nav>
+</mat-toolbar>
