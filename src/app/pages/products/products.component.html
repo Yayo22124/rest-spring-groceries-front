@@ -1,1 +1,26 @@
-<p>products works!</p>
+<main class="px-5 mt-4 mx-auto">
+    <h1 class="text-3xl text-blue-400 font-bold">Products</h1>
+    @if (products) {
+        <div class="flex flex-wrap gap-2  items-center mx-auto">
+            @for (product of products; track $index) {
+                <mat-card class="p-2 shadow-xl border border-yellow-400/40 cursor-pointer hover:scale-105 flex flex-col gap-4">
+                    <mat-card-header>
+                        <mat-card-title class="font-medium text-center text-2xl">{{product.name}}</mat-card-title>
+                        <mat-card-subtitle>{{product.id_product}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><strong>Price:</strong> ${{product.price}}</li>
+                            <li><strong>Cost:</strong> ${{product.cost}}</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-footer>
+                        Provider: {{product.provider}}
+                    </mat-card-footer>
+                </mat-card>
+            }
+        </div>
+    } @else {
+        <mat-spinner></mat-spinner>
+    }
+</main>

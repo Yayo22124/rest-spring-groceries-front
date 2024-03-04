@@ -1,1 +1,22 @@
-<p>employees works!</p>
+<main class="px-5 mt-4">
+    <h1 class="text-3xl text-blue-400 font-bold">Employees</h1>
+    @if (employees) {
+        <div class="flex flex-wrap gap-2  items-center animate-fade-left animate-ease-in-out">
+            @for (employee of employees; track $index) {
+                <mat-card class="p-2 shadow-xl border border-yellow-400/40 cursor-pointer hover:scale-105 flex flex-col gap-4">
+                    <mat-card-header>
+                        <mat-card-title class="font-medium text-center text-2xl">{{employee.name + " " + employee.first_lastname + " " + employee.second_lastname}}</mat-card-title>
+                        <mat-card-subtitle>Hours: {{employee.hours}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><strong>Puesto:</strong> {{employee.job}}</li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+            }
+        </div>
+    } @else {
+        <mat-spinner></mat-spinner>
+    }
+</main>

@@ -1,1 +1,50 @@
-<p>home works!</p>
+<main class="mx-auto mt-5 grid grid-cols-4 grid-rows-3 h-custom w-custom gap-3 animate-fade-down animate-ease-in-out">
+    <mat-card [routerLink]="['/groceries/products']" class=" cursor-pointer bg-yellow-100 flex flex-col col-span-2 row-span-1 items-center justify-evenly hover:border-blue-400/30 hover:shadow-xl ease-in-out transition-all hover:border">
+        <mat-card-header>
+            <mat-card-title class="text-xl font-semibold">Products</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-full flex flex-col justify-center items-center">
+            <p>Discover our products in storage, ready be buy.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card [routerLink]="['/groceries/sales']" class="cursor-pointer bg-blue-100 flex flex-col col-span-1 row-span-1 items-center justify-evenly hover:border-blue-400/30 hover:shadow-xl ease-in-out transition-all hover:border">
+        <mat-card-header>
+            <mat-card-title class="text-xl font-semibold">Sales</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-full flex flex-col justify-center items-center">
+            <p>Discover our products in storage, ready be buy.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card [routerLink]="['/groceries/employees']" class="cursor-pointer bg-rose-100 flex flex-col col-span-1 row-span-2 items-center justify-evenly hover:border-blue-400/30 hover:shadow-xl ease-in-out transition-all hover:border">
+        <mat-card-header>
+            <mat-card-title class="text-xl font-semibold">Employees</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-full flex flex-col justify-center items-center">
+            <p>Discover our products in storage, ready be buy.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card [routerLink]="['/groceries/home']" class="cursor-pointer bg-teal-100 flex flex-col col-span-3 row-span-1 items-center justify-evenly hover:border-blue-400/30 hover:shadow-xl ease-in-out transition-all hover:border">
+        <mat-card-header>
+            <mat-card-title class="text-xl font-semibold">Home</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-full flex flex-col justify-center items-center">
+            <p>Discover our products in storage, ready be buy.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card [routerLink]="['/groceries/orders']" class="cursor-pointer bg-amber-100 flex flex-col col-span-2 row-span-1 items-center justify-evenly hover:border-blue-400/30 hover:shadow-xl ease-in-out transition-all hover:border">
+        <mat-card-header>
+            <mat-card-title class="text-xl font-semibold">Orders</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-full flex flex-col justify-center items-center">
+            <p>Discover our products in storage, ready be buy.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card [routerLink]="['/groceries/suppliers']" class="cursor-pointer bg-slate-100 flex flex-col col-span-2 row-span-1 items-center justify-evenly hover:border-blue-400/30 hover:shadow-xl ease-in-out transition-all hover:border">
+        <mat-card-header>
+            <mat-card-title class="text-xl font-semibold">Suppliers</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-full flex flex-col justify-center items-center">
+            <p>Discover our products in storage, ready be buy.</p>
+        </mat-card-content>
+    </mat-card>
+</main>

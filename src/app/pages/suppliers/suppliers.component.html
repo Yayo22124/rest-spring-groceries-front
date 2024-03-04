@@ -1,1 +1,25 @@
-<p>suppliers works!</p>
+<main class="px-5 mt-4 mx-auto">
+    <h1 class="text-3xl text-blue-400 font-bold">Providers</h1>
+    @if (suppliers) {
+        <div class="flex flex-wrap gap-2 mx-auto  items-center animate-fade-left animate-ease-in-out">
+            @for (supplier of suppliers; track $index) {
+                <mat-card class="p-2 shadow-xl border border-yellow-400/40 cursor-pointer hover:scale-105 flex flex-col gap-4">
+                    <mat-card-header>
+                        <mat-card-title class="font-medium text-center text-2xl">{{supplier.name}}</mat-card-title>
+                        <mat-card-subtitle>{{supplier.id_provider}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><strong>Address:</strong> {{supplier.address}}</li>
+                            <li><strong>Hours:</strong> {{supplier.hours}}</li>
+                            <li><strong>Business:</strong> {{supplier.business}}</li>
+                            <li><strong>Phone Number:</strong> {{supplier.telephone}}</li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+            }
+        </div>
+    } @else {
+        <mat-spinner></mat-spinner>
+    }
+</main>
